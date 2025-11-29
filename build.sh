@@ -1,9 +1,19 @@
 #!/usr/bin/env bash
-# build.sh
 
 set -o errexit
 
+echo "Starting Django deployment build..."
+
+# Install Python dependencies
+echo "Installing dependencies..."
 pip install -r requirements.txt
 
-python manage.py collectstatic --noinput
+# Run database migrations
+echo "Running migrations..."
 python manage.py migrate
+
+# Collect static files
+echo "Collecting static files..."
+python manage.py collectstatic --noinput
+
+echo "Build completed successfully!"
