@@ -1,0 +1,30 @@
+/* ---------------------------
+   GRADIENT THEME
+----------------------------*/
+
+body {
+    background: linear-gradient(135deg, #7f5cff, #4cc3ff);
+    color: #fff;
+}
+
+.header {
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+}
+
+.feature-card,
+.pricing-card,
+.contact-form,
+.contact-info {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.btn-primary {
+    background: #fff;
+    color: #6a48ff;
+    font-weight: bold;
+}

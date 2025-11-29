@@ -1,0 +1,30 @@
+/* ---------------------------
+   MINIMAL APPLE STYLE THEME
+----------------------------*/
+
+body {
+    background: #fafafa;
+    color: #222;
+    font-family: "SF Pro Display", Inter, sans-serif;
+}
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.feature-card,
+.pricing-card,
+.contact-form,
+.contact-info {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+}
+
+input, textarea {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 14px;
+}

@@ -1,0 +1,27 @@
+/* ---------------------------
+   MODERN CORPORATE THEME
+----------------------------*/
+
+body {
+    background: #f4f7fc;
+}
+
+/* Cards */
+.feature-card,
+.pricing-card,
+.contact-info,
+.contact-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+/* Form fields */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}

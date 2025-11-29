@@ -1,0 +1,114 @@
+/* HERO SECTION */
+.features-hero {
+    padding: 80px 0;
+    background: linear-gradient(to bottom right, #0f1d45, #1f3b73);
+    color: #fff;
+    text-align: center;
+}
+
+.features-hero .hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.features-hero .hero-subtitle {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: .85;
+}
+
+/* FEATURES GRID */
+.features-grid {
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+    transition: all .3s ease;
+    border: 1px solid #e6e6e6;
+}
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+.feature-item .icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: #eef2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 30px;
+    color: #4a63d9;
+}
+
+.feature-item h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.feature-item p {
+    font-size: 15px;
+    opacity: .85;
+    line-height: 1.6;
+}
+
+/* CTA SECTION */
+.features-cta {
+    text-align: center;
+    padding: 90px 0;
+    background: #f6f7fb;
+}
+
+.features-cta h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.features-cta p {
+    font-size: 17px;
+    opacity: .8;
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    background: #4a63d9;
+    padding: 14px 34px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.cta-btn:hover {
+    background: #3b52c2;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    .features-hero .hero-title {
+        font-size: 32px;
+    }
+    .features-cta h2 {
+        font-size: 26px;
+    }
+}

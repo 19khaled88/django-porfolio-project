@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Features | Acme Dev{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/features.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="features-hero">
+    <div class="container">
+        <h1 class="hero-title">Powerful Features to Scale Your Business</h1>
+        <p class="hero-subtitle">
+            Modern, secure, high-performance tools crafted for developers, startups, and enterprises.
+        </p>
+    </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features-grid container">
+
+    <!-- Feature Item -->
+    <div class="feature-item">
+        <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+        <h3>Scalable Architecture</h3>
+        <p>Microservices, serverless computing, and cloud-native design to help you scale effortlessly.</p>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+        <h3>Security by Design</h3>
+        <p>Built-in threat modeling, encryption, and continuous monitoring to keep your data secure.</p>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+        <h3>Real-Time Analytics</h3>
+        <p>Track user behavior, performance stats, and system insights with advanced dashboards.</p>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box"><i class="fas fa-bolt"></i></div>
+        <h3>High Performance</h3>
+        <p>Lightning-fast load times, optimized backend, caching layers, and CDN integration.</p>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Responsive</h3>
+        <p>Optimized experience for all devices—phones, tablets, and desktops.</p>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud Powered</h3>
+        <p>Deployed on scalable cloud environments with 99.9% uptime guarantee.</p>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box"><i class="fas fa-users"></i></div>
+        <h3>Team Collaboration</h3>
+        <p>Invite teammates, assign roles, share projects, and collaborate in real-time.</p>
+    </div>
+
+    <div class="feature-item">
+        <div class="icon-box"><i class="fas fa-code"></i></div>
+        <h3>Developer Friendly</h3>
+        <p>Well-documented APIs, SDKs, and integrations for easy development.</p>
+    </div>
+
+</section>
+
+<!-- CTA Section -->
+<section class="features-cta">
+    <div class="container">
+        <h2>Ready to Experience the Next Level?</h2>
+        <p>Start your 14-day free trial. No credit card required.</p>
+        <a href="#" class="cta-btn">Get Started</a>
+    </div>
+</section>
+
+{% endblock %}

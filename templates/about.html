@@ -1,0 +1,128 @@
+{% comment %} {% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    About | Modern About Page
+{% endblock title %}
+
+{% block extra_css %}
+ <link rel="stylesheet" href="{% static 'Base_App/css/about.css' %}">
+{% endblock extra_css %}
+
+{% block main %}
+
+<!-- Hero Section -->
+<section class="about-hero">
+    <div class="container text-center">
+        <h1>About Our Company</h1>
+        <p>Your trusted partner for modern digital solutions.</p>
+    </div>
+</section>
+
+<!-- Who We Are -->
+<section class="container py-5 about-section fade-in">
+    <h2 class="section-title">Who We Are</h2>
+    <p class="section-text">
+        We are a modern tech company delivering high-quality digital solutions.
+        Our mission is to provide reliable, user-friendly services to customers around the world.
+    </p>
+
+    <div class="about-grid">
+        <div class="about-card">
+            <i class="fas fa-bullseye"></i>
+            <h3>Our Vision</h3>
+            <p>To become a global leader in innovative digital products that improve everyday life.</p>
+        </div>
+
+        <div class="about-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Our Mission</h3>
+            <p>Deliver seamless, elegant, and high-performance solutions to empower businesses.</p>
+        </div>
+
+        <div class="about-card">
+            <i class="fas fa-handshake"></i>
+            <h3>Our Commitment</h3>
+            <p>Transparency, communication, and high-quality service in everything we do.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Our Values -->
+<section class="values-section py-5 fade-in">
+    <div class="container">
+        <h2 class="section-title text-center">Our Core Values</h2>
+
+        <div class="values-grid">
+            <div class="value-box">
+                <i class="fas fa-users"></i>
+                <h4>Customer First</h4>
+                <p>We design everything with user experience as our top priority.</p>
+            </div>
+
+            <div class="value-box">
+                <i class="fas fa-rocket"></i>
+                <h4>Innovation</h4>
+                <p>We continuously bring new, creative ideas to life.</p>
+            </div>
+
+            <div class="value-box">
+                <i class="fas fa-check-circle"></i>
+                <h4>Quality</h4>
+                <p>Every product is tested to deliver the best possible performance.</p>
+            </div>
+
+            <div class="value-box">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Integrity</h4>
+                <p>We stand by honesty, responsibility, and long-term reliability.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock main %} {% endcomment %}
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Acme Dev — About</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"> ... </header>
+
+
+<main>
+<section class="container page about-hero">
+<h1>About Acme Dev</h1>
+<p>We are a team of senior engineers, designers and product people building software for ambitious companies.</p>
+<img src="assets/images/team.jpg" alt="Our team" style="max-width:100%;border-radius:8px;margin-top:1rem;"/>
+</section>
+
+
+<section class="container page">
+<h2>Our values</h2>
+<ul>
+<li>Customer-first</li>
+<li>Ship early, iterate often</li>
+<li>Quality & empathy</li>
+</ul>
+</section>
+</main>
+
+
+<footer class="site-footer"> ...</footer>
+
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

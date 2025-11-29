@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us | DevCompany{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+    <!-- Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We're here to help. Fill the form and we’ll get back to you shortly!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>Have questions? Reach out anytime — our team is ready to help.</p>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>48/B, Tech Street, Dhaka, Bangladesh</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>+880 1234 567 890</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>support@devcompany.com</span>
+            </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" placeholder="Write your message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+                <p id="formStatus"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29209.481591913284!2d90.37164311123239!3d23.80730560824166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7bd702d0027%3A0x6d2f1f4dfdc2621c!2sDhaka!5e0!3m2!1sen!2sbd!4v1699542233443"
+            allowfullscreen loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>© 2025 DevCompany — All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+{% endblock  %} 
+
+{% block extra_js %}
+<script>
+    const form = document.getElementById("contactForm");
+    const statusEl = document.getElementById("formStatus");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        statusEl.textContent = "Message sent successfully!";
+        statusEl.style.color = "green";
+        form.reset();
+    });
+</script>
+{% endblock %}

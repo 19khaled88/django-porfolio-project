@@ -1,0 +1,46 @@
+/* ---------------------------
+   DARK CYBER THEME
+----------------------------*/
+
+body {
+    background: #0e0e0e;
+    color: #e3e3e3;
+}
+
+.header {
+    background: #111;
+    box-shadow: none;
+}
+
+.navbar a {
+    color: #ccc;
+}
+
+.navbar a.active {
+    color: #00d4ff;
+}
+
+.feature-card,
+.pricing-card,
+.contact-form,
+.contact-info {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.btn-primary {
+    background: #00d4ff;
+}
+
+.btn-outline {
+    border-color: #00d4ff;
+    color: #00d4ff;
+}
+
+input, textarea {
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+}

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Events | Modern Web App{% endblock title %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/events.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Events Hero Section -->
+<section class="events-hero">
+    <div class="container text-center">
+        <h1 class="hero-title">Upcoming & Past Events</h1>
+        <p class="hero-subtitle">Explore our tech fairs, competitions, festivals and more.</p>
+    </div>
+</section>
+
+<!-- Events Listing -->
+<section class="events-section container">
+    <div class="events-grid">
+
+        <!-- Event Card 1 -->
+        <div class="event-card">
+            <img src="{% static 'images/event-webhosting.jpg' %}" alt="Web Hosting Fair">
+            <div class="event-content">
+                <h3>International Web Hosting Fair 2025</h3>
+                <p>Join professionals from around the world to explore the future of cloud hosting, servers and infrastructure.</p>
+                <p class="event-date">📅 March 12–14, 2025 — Dhaka</p>
+                <a href="#" class="btn-event">Register Now</a>
+            </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="event-card">
+            <img src="{% static 'images/code-compition.jpg' %}" alt="Code Competition">
+            <div class="event-content">
+                <h3>National Code Competition 2025</h3>
+                <p>Compete with top programmers across the country. Cash prizes, certificates, and job opportunities.</p>
+                <p class="event-date">📅 April 3, 2025 — Online</p>
+                <a href="#" class="btn-event">Join the Contest</a>
+            </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="event-card">
+            <img src="{% static 'images/digital-fare.jpeg' %}" alt="Tech Festival">
+            <div class="event-content">
+                <h3>Digital Innovation Festival 2025</h3>
+                <p>A celebration of cutting-edge technologies, AR/VR experiences, and developer workshops.</p>
+                <p class="event-date">📅 May 10–12, 2025 — Chittagong</p>
+                <a href="#" class="btn-event">Explore</a>
+            </div>
+        </div>
+
+        <!-- Event Card 4 -->
+        <div class="event-card">
+            <img src="{% static 'images/website-design-award.jpg' %}" alt="Web Design Award">
+            <div class="event-content">
+                <h3>Best Website Design Award 2025</h3>
+                <p>Showcase your creativity and win awards in UI/UX, innovation, and accessibility categories.</p>
+                <p class="event-date">📅 July 28, 2025 — Dhaka</p>
+                <a href="#" class="btn-event">Submit Your Work</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

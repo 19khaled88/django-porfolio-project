@@ -1,0 +1,105 @@
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(to right, #4f46e5, #6d28d9);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.about-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    max-width: 750px;
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* About Cards */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.about-card i {
+    font-size: 40px;
+    color: #4f46e5;
+    margin-bottom: 15px;
+}
+
+/* Values Section */
+.values-section {
+    background: #f8f8ff;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.value-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.value-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.10);
+}
+
+.value-box i {
+    font-size: 36px;
+    color: #6d28d9;
+    margin-bottom: 10px;
+}
+
+/* Smooth Fade Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

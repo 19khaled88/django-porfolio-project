@@ -1,0 +1,106 @@
+/* ---------------------------
+   MAIN.SHARED LAYOUT STYLES
+----------------------------*/
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #222;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navbar */
+.header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+}
+
+.navbar a.active {
+    color: #007bff;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Grid layout */
+.contact-grid,
+.features-grid,
+.pricing-grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    padding: 12px 22px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    background: #007bff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.btn-outline {
+    padding: 12px 22px;
+    border: 2px solid #007bff;
+    color: #007bff;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    background: #222;
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+}
