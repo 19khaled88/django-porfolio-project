@@ -1,128 +1,178 @@
-{% comment %} {% extends "base.html" %}
+{% extends "base.html" %}
 {% load static %}
 
-{% block title %}
-    About | Modern About Page
-{% endblock title %}
+{% block title %}About Us | Modern Web App{% endblock title %}
 
-{% block extra_css %}
- <link rel="stylesheet" href="{% static 'Base_App/css/about.css' %}">
-{% endblock extra_css %}
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock  %}
 
-{% block main %}
+{% block content %}
 
 <!-- Hero Section -->
 <section class="about-hero">
     <div class="container text-center">
         <h1>About Our Company</h1>
-        <p>Your trusted partner for modern digital solutions.</p>
+        <p>We help businesses grow through powerful, modern, and scalable digital solutions.</p>
     </div>
 </section>
 
-<!-- Who We Are -->
-<section class="container py-5 about-section fade-in">
-    <h2 class="section-title">Who We Are</h2>
-    <p class="section-text">
-        We are a modern tech company delivering high-quality digital solutions.
-        Our mission is to provide reliable, user-friendly services to customers around the world.
-    </p>
-
-    <div class="about-grid">
-        <div class="about-card">
-            <i class="fas fa-bullseye"></i>
-            <h3>Our Vision</h3>
-            <p>To become a global leader in innovative digital products that improve everyday life.</p>
+<!-- Company Intro Section -->
+<section class="company-intro container">
+    <div class="intro-grid">
+        <div class="intro-text">
+            <h2>Who We Are</h2>
+            <p>
+                We are a passionate team of developers, designers, and innovators focused
+                on building next-generation web applications and digital products. 
+                With years of experience in full-stack development, cloud technologies, 
+                and UI/UX design, we create powerful digital solutions that help businesses 
+                scale and compete globally.
+            </p>
+            <p>
+                Our mission is to deliver high-quality software that blends performance,
+                security, and beautiful user experience — all backed by reliable support.
+            </p>
         </div>
 
-        <div class="about-card">
-            <i class="fas fa-lightbulb"></i>
-            <h3>Our Mission</h3>
-            <p>Deliver seamless, elegant, and high-performance solutions to empower businesses.</p>
-        </div>
-
-        <div class="about-card">
-            <i class="fas fa-handshake"></i>
-            <h3>Our Commitment</h3>
-            <p>Transparency, communication, and high-quality service in everything we do.</p>
+        <div class="intro-img">
+            <img src="{% static 'images/about-team.png' %}" alt="About us image">
         </div>
     </div>
 </section>
 
-<!-- Our Values -->
-<section class="values-section py-5 fade-in">
+<!-- Mission / Vision -->
+<section class="mission-section">
     <div class="container">
-        <h2 class="section-title text-center">Our Core Values</h2>
+        <div class="mv-grid">
 
-        <div class="values-grid">
-            <div class="value-box">
-                <i class="fas fa-users"></i>
-                <h4>Customer First</h4>
-                <p>We design everything with user experience as our top priority.</p>
+            <div class="mv-box">
+                
+                <img src="{% static 'images/mission.jpg' %}" alt="Mission">
+                <h3>Our Mission</h3>
+                <p>
+                    To empower businesses with innovative technology that improves productivity,
+                    drives growth, and delivers outstanding user experiences.
+                </p>
             </div>
 
-            <div class="value-box">
-                <i class="fas fa-rocket"></i>
-                <h4>Innovation</h4>
-                <p>We continuously bring new, creative ideas to life.</p>
+            <div class="mv-box">
+                <img src="{% static 'images/vission.jpg' %}" alt="Vission">
+                <h3>Our Vision</h3>
+                <p>
+                    To become a global leader in digital transformation by creating impactful,
+                    future-ready solutions with technology and creativity.
+                </p>
             </div>
 
-            <div class="value-box">
-                <i class="fas fa-check-circle"></i>
-                <h4>Quality</h4>
-                <p>Every product is tested to deliver the best possible performance.</p>
-            </div>
-
-            <div class="value-box">
-                <i class="fas fa-shield-alt"></i>
-                <h4>Integrity</h4>
-                <p>We stand by honesty, responsibility, and long-term reliability.</p>
-            </div>
         </div>
     </div>
 </section>
 
-{% endblock main %} {% endcomment %}
+<!-- Why Choose Us -->
+<section class="why-us container">
+    <h2 class="section-title">Why Choose Us</h2>
 
+    <div class="why-grid">
 
+        <div class="why-card">
+            <img src="{% static 'images/badge.png' %}" alt="Quality">
+            <h3>High Quality</h3>
+            <p>We follow modern development standards, ensuring clean, scalable and professional work.</p>
+        </div>
 
+        <div class="why-card">
+            <img src="{% static 'images/support.png' %}" alt="Support">
+            <h3>Reliable Support</h3>
+            <p>We provide long-term support, fast responses, and quick issue resolution.</p>
+        </div>
 
+        <div class="why-card">
+            <img src="{% static 'images/shield.png' %}" alt="Security">
+            <h3>Secure & Stable</h3>
+            <p>All our systems are built with strict security practices for long-term stability.</p>
+        </div>
 
+        <div class="why-card">
+            <img src="{% static 'images/project-management.png' %}" alt="Innovation">
+            <h3>Innovation Focused</h3>
+            <p>We consistently implement creative and modern solutions that give businesses an edge.</p>
+        </div>
 
-
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Acme Dev — About</title>
-<link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-<header class="site-header"> ... </header>
-
-
-<main>
-<section class="container page about-hero">
-<h1>About Acme Dev</h1>
-<p>We are a team of senior engineers, designers and product people building software for ambitious companies.</p>
-<img src="assets/images/team.jpg" alt="Our team" style="max-width:100%;border-radius:8px;margin-top:1rem;"/>
+    </div>
 </section>
 
+<!-- Team Section -->
+<section class="team-section">
+    <div class="container">
+        <h2 class="section-title text-center">Our Team</h2>
 
-<section class="container page">
-<h2>Our values</h2>
-<ul>
-<li>Customer-first</li>
-<li>Ship early, iterate often</li>
-<li>Quality & empathy</li>
-</ul>
+        <div class="team-grid">
+
+            <div class="team-card">
+                <img src="{% static 'images/team-1.jpg' %}" alt="Team Member">
+                <h4>Khaled Ahasan</h4>
+                <p>Founder & Lead Developer</p>
+            </div>
+
+            <div class="team-card">
+                <img src="{% static 'images/team-2.jpeg' %}" alt="Team Member">
+                <h4>Sarah Jahan</h4>
+                <p>Project Manager</p>
+            </div>
+
+            <div class="team-card">
+                <img src="{% static 'images/team-3.jpeg' %}" alt="Team Member">
+                <h4>Arif Hasan</h4>
+                <p>UI/UX Designer</p>
+            </div>
+
+            <div class="team-card">
+                <img src="{% static 'images/team-4.jpg' %}" alt="Team Member">
+                <h4>Mehedi Hasan</h4>
+                <p>Backend Engineer</p>
+            </div>
+
+        </div>
+    </div>
 </section>
-</main>
 
+<!-- Numbers / Achievements -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
 
-<footer class="site-footer"> ...</footer>
+            <div class="stat-box">
+                <h2>350+</h2>
+                <p>Projects Delivered</p>
+            </div>
 
+            <div class="stat-box">
+                <h2>120+</h2>
+                <p>Happy Clients</p>
+            </div>
 
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+            <div class="stat-box">
+                <h2>15+</h2>
+                <p>Industries Served</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>8+</h2>
+                <p>Years Experience</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+    <div class="container text-center">
+        <h2>Ready to Work With Us?</h2>
+        <p>Let’s build something amazing together.</p>
+        <a href="/contact/" class="btn-cta">Contact Us</a>
+    </div>
+</section>
+
+{% endblock content %}

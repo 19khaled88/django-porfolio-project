@@ -1,6 +1,6 @@
 /* HERO SECTION */
 .contact-hero {
-    background: linear-gradient(120deg, #4e54c8, #8f94fb);
+    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -135,7 +135,9 @@
 .map-section {
     width: 95%;
     height: 350px;
-margin: 0 auto;
+    margin: 0 auto;
+    padding-bottom: 10px !important;
+    margin-bottom: 10px;
 }
 
 .map-section iframe{
