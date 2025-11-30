@@ -19,7 +19,7 @@ dj-database-url
 
 # Environment variables
 python-dotenv==1.0.0
-
+django-environ
 environ
 
 
