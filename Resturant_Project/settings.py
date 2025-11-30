@@ -10,12 +10,19 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 import dj_database_url
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,6 +42,16 @@ ALLOWED_HOSTS = [
 ]
 
 
+
+# PORT = 5432
+# DATABASE = web_dev_db_liz6
+# USERNAME = web_khaled
+# INTERNAL DATABASE URL = A0ISkYJzvZfz40z7ZR9R0qigmMjAmU1t
+# EXTERNAL DATABASE URL = postgresql://web_khaled:A0ISkYJzvZfz40z7ZR9R0qigmMjAmU1t@dpg-d4m2jdqli9vc73eirfg0-a.oregon-postgres.render.com/web_dev_db_liz6 
+# PSQL COMMAND = PGPASSWORD=A0ISkYJzvZfz40z7ZR9R0qigmMjAmU1t psql -h dpg-d4m2jdqli9vc73eirfg0-a.oregon-postgres.render.com -U web_khaled web_dev_db_liz6
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,11 +61,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "whitenoise.runserver_nostatic",
     "Base_App",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -83,16 +102,33 @@ WSGI_APPLICATION = "Resturant_Project.wsgi.application"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    # "default": {
-    #     "ENGINE": "django.db.backends.sqlite3",
-    #     "NAME": BASE_DIR / "db.sqlite3",
-    # }
+    # "default": {"ENGINE": "django.db.backends.sqlite3","NAME": BASE_DIR / "db.sqlite3", }
+
+
+    # 'default':env.db(default='sqlite:///db.sqlite3'),
 
     'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',
+        # default='sqlite:///db.sqlite3',
+        default='postgresql://web_khaled:A0ISkYJzvZfz40z7ZR9R0qigmMjAmU1t@dpg-d4m2jdqli9vc73eirfg0-a.oregon-postgres.render.com/web_dev_db_liz6',
         conn_max_age=600
     )
+    
+    
 }
+
+# Render PostgreSQl database 
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if DATABASE_URL:
+    DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
+    
+
+# For production
+if os.environ.get('RENDER'):
+    DATABASES['default'] = dj_database_url.config(
+        conn_max_age=600,
+        conn_health_checks=True,
+        ssl_require=True
+    )
 
 
 # Password validation
@@ -121,7 +157,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")

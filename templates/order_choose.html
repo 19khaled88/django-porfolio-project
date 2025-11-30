@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Order Service | Pricing Plan{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/order.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="order-section">
+    <div class="container">
+        <div class="order-title">
+            <h2 class="page-title">Order Your Service</h2>
+            <p class="page-subtitle">
+                Complete the form below to confirm your project request.
+            </p>
+        </div>
+
+        <div class="order-wrapper">
+
+            <!-- LEFT: ORDER FORM -->
+            <div class="order-form">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+
+                    <h3 class="form-title">Your Information</h3>
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" required placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" name="phone" required placeholder="Enter phone number">
+                    </div>
+
+                    <hr>
+
+                    <h3 class="form-title">Company Details</h3>
+
+                    <div class="form-group">
+                        <label>Company / Business Name</label>
+                        <input type="text" name="company" placeholder="Company Name Must">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company Address</label>
+                        <textarea name="address" required placeholder="Give your detailed address..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Meet time (Approx.)</label>
+                        <input type="date" name="meat_time">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-btn">Place Order</button>
+                </form>
+            </div>
+
+            <!-- RIGHT: PLAN SUMMARY -->
+            <div class="order-summary">
+                <div class="summary-card">
+                    <h3 class="summary-title">Selected Plan</h3>
+
+                    <div class="selected-plan">
+                        <h4>{{ plan_name|default:"Starter" }}</h4>
+                        <p class="plan-price">{{ plan_price|default:"$499" }}</p>
+                    </div>
+
+                    <ul class="summary-features">
+                        {% if plan_name == "Starter" %}
+                        <li>Basic Web Design</li>
+                        <li>1 Month Support</li>
+                        <li>Responsive Layout</li>
+                        <li>Basic SEO Setup</li>
+
+                        {% elif plan_name == "Professional" %}
+                        <li>Custom Web Development</li>
+                        <li>3 Months Support</li>
+                        <li>Interactive UI/UX</li>
+                        <li>Performance & SEO Optimization</li>
+
+                        {% elif plan_name == "Enterprise" %}
+                        <li>Full-stack Solutions</li>
+                        <li>6 Months Support</li>
+                        <li>Custom Integrations</li>
+                        <li>Advanced SEO & Analytics</li>
+
+                        {% else %}
+                        <li>Plan details are not available.</li>
+                        {% endif %}
+                    </ul>
+
+                    <p class="note">You can change plan anytime by going back to pricing page.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

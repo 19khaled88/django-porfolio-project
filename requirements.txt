@@ -13,7 +13,7 @@ whitenoise
 
 # Database
 # dj-database-url==2.0.0
-# psycopg2-binary==2.9.7
+psycopg2-binary
 dj-database-url
 
 

@@ -29,6 +29,10 @@ urlpatterns = [
     path('event/', PricingView,name='event'),
     path('about/', AboutView,name='about'),
     path('contact/', ContactView,name='contact'),
+    
+    # NEW ORDER ROUTE
+    path('order/', OrderDefaultView, name='order_choose'),
+    path('order/<str:plan>/', OrderView, name='order')
 ] 
 
 if settings.DEBUG:

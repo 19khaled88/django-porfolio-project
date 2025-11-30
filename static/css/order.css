@@ -1,0 +1,145 @@
+.order-section {
+    padding: 60px 0;
+    background: #f7f8fa;
+}
+
+.page-title {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+}
+.order-section .container .order-title{
+    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+    padding: 40px 0;
+    color:white;
+}
+.page-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.order-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* LEFT FORM */
+.order-form {
+    flex: 1;
+    min-width: 340px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid gray;
+    margin: 10px;
+}
+
+.order-form .form-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    background: #007BFF;
+    padding: 10px 0;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+}
+
+/* RIGHT SUMMARY */
+.order-summary {
+    width: 350px;
+    min-width: 300px;
+}
+
+.summary-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.summary-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    background: #007BFF;
+    padding: 5px 0 5px 2px;
+    color:white
+   
+}
+
+.selected-plan {
+    background: #f2f6ff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.selected-plan h4 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.plan-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a73e8;
+    margin-top: 8px;
+}
+
+.summary-features {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.summary-features li {
+    margin-bottom: 10px;
+}
+
+.note {
+    font-size: 13px;
+    color: #666;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .order-wrapper {
+        flex-direction: column;
+    }
+    .order-summary {
+        width: 100%;
+    }
+}
