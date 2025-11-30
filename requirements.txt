@@ -20,6 +20,8 @@ dj-database-url
 # Environment variables
 python-dotenv==1.0.0
 
+environ
+
 
 # Additional utilities (optional)
 # Pillow==10.0.1  # for image processing
